@@ -1,0 +1,485 @@
+/* Professional Portfolio Stylesheet */
+
+:root {
+  --primary: #ff5722;
+  --dark: #221a1a;
+  --light: #ffffff;
+  --gray: #777;
+  --bg: #f8f8f8;
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: var(--light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem 8% 4rem;
+  min-height: 100vh;
+}
+
+.profile-circle {
+width: 260px;
+height: 260px;
+border-radius: 50%;
+background: #eee;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero-content h1 span {
+  color: var(--primary);
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  color: var(--dark);
+  transition: 0.3s;
+}
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.hire-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: var(--primary);
+  color: var(--light);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.hire-btn:hover {
+  opacity: 0.8;
+}
+
+/* Sections */
+section {
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+section h2 span {
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.4rem;
+  background: var(--dark);
+  color: var(--light);
+  margin-top: 3rem;
+}
+/* CONTACT SECTION */
+#contact {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column; /* ensures vertical stacking */
+    align-items: center;    /* centers the h2 and form */
+}
+
+
+#contact h2 {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+
+/* Contact Form Container */
+#contact form {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs & Textarea */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact textarea {
+    resize: none;
+    height: 140px;
+}
+
+/* Focus State */
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.25);
+}
+
+/* Submit Button */
+#contact button {
+    padding: 14px;
+    background: #0ea5e0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contact button:hover {
+    background: #564ef8;
+    transform: translateY(-3px);
+}
+/* Center the hero image area */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Professional Profile Circle */
+.profile-circle {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border: 4px solid #ffffff;
+    box-shadow: 
+        0 8px 20px rgba(0,0,0,0.12),
+        0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a professional hover effect */
+.profile-circle:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.18),
+        0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* Image inside circle */
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps proportions and fills circle */
+    border-radius: 50%;
+}
+/* Animated Background for the body */
+body {
+     background: linear-gradient(270deg, #ffffff, #eaf4fc, #dbeaf7, #f5faff);
+    background-size: 800% 800%; /* makes the gradient move */
+    animation: gradientBG 20s ease infinite;
+    color: var(--dark);
+    line-height: 1.6;
+    transition: background 0.5s;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Contact subtitle text */
+.contact-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #6d4f45;
+}
+
+/* Contact icons container */
+.contact-social-icons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Base icon styling */
+.c-icon {
+  font-size: 2.2rem;
+  margin: 0 12px;
+  display: inline-block;
+  transition: transform 0.3s ease, 
+              color 0.3s ease, 
+              text-shadow 0.3s ease;
+}
+
+/* Platform colors */
+.c-icon.facebook {
+  color: #1877f2;
+}
+
+.c-icon.instagram {
+  color: #E1306C;
+}
+
+/* Hover animation */
+.c-icon:hover {
+  transform: scale(1.25) rotate(5deg);
+  text-shadow: 0 0 12px rgba(236, 4, 97, 0.7);
+  opacity: 0.9;
+}
+/* Photos Section */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.photo-card {
+  background: var(--light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 0px 5px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  /* Make the card a fixed aspect ratio or height */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 150%;        /* make image cover the whole card */
+  object-fit: contain;   /* crop image if needed to fit */
+  display: block;
+}
+
+
+.photo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: var(--light);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;              /* hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;              /* shown on click */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger span {
+  transition: 0.3s ease;
+}
+/* Slide-down animation */
+.nav-links {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Open state */
+.nav-links.active {
+  max-height: 500px; /* enough for menu */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hamburger animation */
+.hamburger span {
+  transition: 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
